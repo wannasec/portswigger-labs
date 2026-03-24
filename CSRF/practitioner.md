@@ -1,6 +1,10 @@
 # Cross-Site Request Forgery (CSRF) Labs PortSwigger
 
-## Practitioner
+### Practitioner
+**Completed:** 9/11
+
+---
+
 ### CSRF Token Validation Issues
 ### 2. CSRF where token validation depends on request method
 
