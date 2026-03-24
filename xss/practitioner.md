@@ -1,7 +1,11 @@
-# Cross-Site Scripting (XSS) Labs – PortSwigger
-## Practitioner
+# Cross-Site Scripting (XSS) Labs PortSwigger
+### Practitioner
+**Completed:** 5/16
+
+---
+
 ## Advanced DOM XSS
-### 8. DOM XSS inside select element
+### 1. DOM XSS inside select element
 
 **Goal:** Escape a <select> context and inject JavaScript.
 
@@ -11,7 +15,7 @@
 
 ---
 
-### 9. DOM XSS in AngularJS expression
+### 2. DOM XSS in AngularJS expression
 
 **Goal:** Execute JavaScript through AngularJS template expressions.
 
@@ -21,7 +25,7 @@
 
 ---
 
-### 10. Reflected DOM XSS
+### 3. Reflected DOM XSS
 
 **Goal:** Exploit unsafe eval() processing of reflected JSON.
 
@@ -31,7 +35,7 @@
 
 **Result:** Escapes the JSON structure and executes JavaScript.
 
-### 11. Stored DOM XSS
+### 4. Stored DOM XSS
 
 **Goal:** Bypass incomplete HTML encoding.
 
@@ -44,7 +48,7 @@
 ---
 
 ## XSS Exploitation
-### 12. Exploiting XSS to bypass CSRF defenses
+### 5. Exploiting XSS to bypass CSRF defenses
 
 **Goal:** Steal a CSRF token and change a victim’s email address.
 
