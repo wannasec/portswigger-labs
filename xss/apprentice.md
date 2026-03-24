@@ -1,6 +1,9 @@
 # Cross-Site Scripting (XSS) Labs  PortSwigger
 
-## Apprentice
+### Apprentice
+**Completed:** 7/9
+
+---
 
 ### 1. Reflected XSS in HTML context (no encoding)
 
