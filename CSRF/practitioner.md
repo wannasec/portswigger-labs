@@ -6,7 +6,7 @@
 ---
 
 ### CSRF Token Validation Issues
-### 2. CSRF where token validation depends on request method
+### 1. CSRF where token validation depends on request method
 
 **Goal:** Bypass CSRF protection.
 
@@ -25,7 +25,7 @@ document.forms[0].submit();
 
 ---
 
-### 3. CSRF where token validation depends on token being present
+### 2. CSRF where token validation depends on token being present
 
 **Goal:** Bypass CSRF protection.
 
@@ -44,7 +44,7 @@ document.forms[0].submit();
 
 ---
 
-### 4. CSRF where token is not tied to user session
+### 3. CSRF where token is not tied to user session
 
 **Goal:** Perform CSRF using a valid token from another user.
 
@@ -59,7 +59,7 @@ document.forms[0].submit();
 
 ---
 
-### 5. CSRF where token is tied to non-session cookie
+### 4. CSRF where token is tied to non-session cookie
 
 **Goal:** Bypass CSRF using cookie injection.
 
@@ -77,7 +77,7 @@ onerror="document.forms[0].submit()">
 
 ---
 
-### 6. CSRF where token is duplicated in cookie
+### 5. CSRF where token is duplicated in cookie
 
 **Goal:** Exploit the double-submit cookie pattern.
 
@@ -101,7 +101,7 @@ SameSite Cookie Bypass
 
 ---
 
-### 7. SameSite Lax bypass via method override
+### 6. SameSite Lax bypass via method override
 
 **Goal:** Perform CSRF despite SameSite=Lax cookies.
 
@@ -118,7 +118,7 @@ document.location="https://LAB-ID.web-security-academy.net/my-account/change-ema
 
 ---
 
-### 8. SameSite Strict bypass via client-side redirect
+### 7. SameSite Strict bypass via client-side redirect
 
 **Goal:** Bypass SameSite=Strict cookie restrictions.
 
@@ -135,7 +135,7 @@ document.location="https://LAB-ID.web-security-academy.net/post/comment/confirma
 
 ---
 
-### 9. SameSite Lax bypass via cookie refresh
+### 8. SameSite Lax bypass via cookie refresh
 
 **Goal:** Refresh the victim’s session cookie before launching the attack.
 
@@ -163,7 +163,7 @@ Header Validation Bypass
 
 ---
 
-### 10. CSRF where Referer validation depends on header being present
+### 9. CSRF where Referer validation depends on header being present
 
 **Goal:** Bypass Referer validation.
 
