@@ -1,8 +1,12 @@
-# Practitioner
+# SQL Injection Labs PortSwigger
+### Practitioner
+**Completed:** 14/16
 
-## UNION-based SQL Injection
+---
 
-### 3. Querying database type and version (Oracle)
+# UNION-based SQL Injection
+
+### 1. Querying database type and version (Oracle)
 
 **Goal:** Retrieve the database version.
 
@@ -12,7 +16,7 @@
 
 ---
 
-### 4. Querying database version (MySQL / Microsoft)
+### 2. Querying database version (MySQL / Microsoft)
 
 **Goal:** Retrieve DB version.
 
@@ -20,7 +24,7 @@
 
 ---
 
-### 5. Listing database contents (Non-Oracle)
+### 3. Listing database contents (Non-Oracle)
 
 **Goal:** Extract usernames and passwords.
 
@@ -39,7 +43,7 @@ Extract credentials: ' UNION SELECT username, password FROM users_xxx--
 
 ---
 
-### 6. Listing database contents (Oracle)
+### 4. Listing database contents (Oracle)
 
 **Goal:** Extract credentials from Oracle database.
 
@@ -56,7 +60,7 @@ Extract credentials:
 
 ---
 
-### 7. UNION attack – determining number of columns
+### 5. UNION attack – determining number of columns
 
 **Goal:** Find number of columns returned by the query.
 
@@ -67,7 +71,7 @@ Extract credentials:
 
 ---
 
-### 8. UNION attack – finding text column
+### 6. UNION attack – finding text column
 
 **Goal:** Identify which column accepts string data.
 
@@ -77,7 +81,7 @@ Extract credentials:
 
 ---
 
-### 9. UNION attack – retrieving data from other tables
+### 7. UNION attack – retrieving data from other tables
 
 **Goal:** Extract usernames and passwords.
 
@@ -85,7 +89,7 @@ Extract credentials:
 
 ---
 
-### 10. Retrieving multiple values in one column
+### 8. Retrieving multiple values in one column
 
 **Goal:** Extract credentials when only one column supports text.
 
@@ -98,7 +102,7 @@ Extract credentials:
 
 # Blind SQL Injection
 
-### 11. Blind SQL injection with conditional responses
+### 9. Blind SQL injection with conditional responses
 
 **Goal:** Extract admin password using boolean conditions.
 
@@ -109,7 +113,7 @@ Extract credentials:
 
 ---
 
-### 12. Blind SQL injection with conditional errors
+### 10. Blind SQL injection with conditional errors
 
 **Goal:** Extract admin password using database errors.
 
@@ -120,7 +124,7 @@ Extract credentials:
 
 ---
 
-### 13. Visible error-based SQL injection
+### 11. Visible error-based SQL injection
 
 **Goal:** Leak data through verbose error messages.
 
@@ -133,7 +137,7 @@ Extract credentials:
 
 # Time-based Blind SQL Injection
 
-### 14. Blind SQL injection with time delays
+### 12. Blind SQL injection with time delays
 
 **Goal:** Trigger a delay to confirm injection.
 
@@ -142,7 +146,7 @@ Extract credentials:
 
 ---
 
-### 15. Blind SQL injection with time delays and data extraction
+### 13. Blind SQL injection with time delays and data extraction
 
 **Goal:** Extract admin password using conditional delays.
 
@@ -154,7 +158,7 @@ THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users--
 
 # WAF Bypass SQL Injection
 
-### 16. SQL injection with filter bypass via XML encoding
+### 14. SQL injection with filter bypass via XML encoding
 
 **Goal:** Extract credentials despite a WAF.
 
