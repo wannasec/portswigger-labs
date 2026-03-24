@@ -1,6 +1,9 @@
 # Cross-Site Request Forgery (CSRF) Labs PortSwigger
 
-## Apprentice
+### Apprentice
+**Completed:** 1/1
+
+---
 
 ### 1. CSRF vulnerability with no defenses
 
