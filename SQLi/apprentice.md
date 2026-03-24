@@ -1,6 +1,9 @@
 # SQL Injection Labs PortSwigger
 
-## Apprentice
+### Apprentice
+**Completed:** 2/2
+
+---
 
 ### 1. SQL injection in WHERE clause allowing retrieval of hidden data
 
